@@ -19,4 +19,8 @@ class MessageController extends Controller
         $msg->save();
         return redirect()->route('posts.index');
     }
+    public function getMsg(Request $request){
+        $messages = Message::all();
+        return view('pages.message')->withMessages($messages);
+    }
 }
