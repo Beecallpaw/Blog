@@ -19,6 +19,9 @@
       <li class="nav-item">
         <a href="/messages" class="nav-link">View Messages</a>
       </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link">Login</a>
+      </li>
     </ul>
   </div>
 </nav>
