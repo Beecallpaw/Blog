@@ -1,19 +1,22 @@
 @extends('layouts.main') 
 @section('content')
 <h1>Contact me Here</h1>
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+<div class="row">
+  <div class="col-md-8">
+{{ Form::open(array('url' => 'contact/submit')) }}
+ {{Form::label('email', 'Email Address:' )}} 
+    {{Form::text('email',null,['class'=>'form-control']) }}
+ {{Form::label('password', 'Password:' )}} 
+    {{Form::text('password',null,['class'=>'form-control']) }}
+      {{Form::label('txt', 'Enter Message:')}}
+    {{Form::textarea('txt',null,['class'=>'form-control', 'rows'=>'8','cols'=>'80'])}}
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label name="txt">Message</label>
-    <textarea name="txt" cols="80" rows="6" placeholder="Anything you gotta say" class="form-control"></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</div>
+    <br>
+    <div class="row">
+      <div class="col-md-3">
+        {{Form::submit('Submit',['class' =>'btn btn-primary btn-block'])}}
+      </div>
+    </div>
+    {{ Form::close() }}
 @endsection
