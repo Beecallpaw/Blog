@@ -14,7 +14,7 @@
         <a href="/posts" class="nav-link">All Blogs</a>
       </li>
       <li class="nav-item">
-        <a href="/posts/create" class="nav-link"><i class="fa fa-plus">&nbsp; </i>Add New Blog</a>   
+        <a href="/posts/create" class="nav-link"><i class="fa fa-plus">&nbsp; </i>Add New Blog</a>
       </li>
       <li class="nav-item">
         <a href="/messages" class="nav-link">View Messages</a>

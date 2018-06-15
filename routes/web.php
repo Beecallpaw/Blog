@@ -16,8 +16,7 @@ Route::get('about', 'PagesController@getAbout');
 Route::get('contact', 'PagesController@getContact');
 Route::resource('posts', 'PostController')->middleware('auth');
 Route::post('contact/submit', 'MessageController@submit');
-Route::get('messages', 'MessageController@getMsg');
-
+Route::get('messages', 'MessageController@getMsg')->middleware(['auth','admin']);
 
 Auth::routes();
 
